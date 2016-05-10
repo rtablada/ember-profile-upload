@@ -1,0 +1,1 @@
+export { default } from 'ember-profile-upload/components/profile-upload';
