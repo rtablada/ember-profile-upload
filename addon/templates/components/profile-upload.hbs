@@ -1,3 +1,7 @@
 {{#if src}}
   <img src="{{src}}">
 {{/if}}
+
+<button>Upload</button>
+
+<input type="file" hidden="true" onclick={{action stopPropagation}} {{action getFileFromInput on="change"}}>

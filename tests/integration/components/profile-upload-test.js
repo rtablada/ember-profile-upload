@@ -13,3 +13,19 @@ test('it renders existing image', function(assert) {
 
   assert.equal(this.$(`img`).attr(`src`), 'img.png');
 });
+
+test('it clicks the file upload when clicked', function(assert) {
+  assert.expect(1);
+
+  this.render(hbs`{{profile-upload}}`);
+
+  this.$(`input`).on(`click`, listenForClick);
+
+  this.$(`div`).click();
+
+  function listenForClick(ev) {
+    ev.preventDefault();
+
+    assert.ok(true);
+  }
+});
