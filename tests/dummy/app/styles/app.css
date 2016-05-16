@@ -1,0 +1,48 @@
+.profile-upload {
+  position: relative;
+  width: 200px;
+
+  border-radius: 2rem;
+  cursor: pointer;
+
+  overflow: hidden;
+}
+
+.profile-upload img {
+  width: 100%;
+}
+
+.profile-upload__btn {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding: 1rem;
+
+  border: 0;
+  border-radius: 0.5rem;
+
+  background: #5d6bb6;
+
+  color: #efefef;
+  font-size: 1rem;
+
+  opacity: 0.5;
+  outline: none;
+  cursor: pointer;
+}
+
+.profile-upload:hover .profile-upload__btn {
+  opacity: 1;
+}
+
+.profile-upload.active .profile-upload__btn {
+  display: none;
+}
+
+.profile-upload.active:hover  .profile-upload__btn {
+  display: block;
+
+  opacity: 0.8;
+}
