@@ -1,7 +1,7 @@
 {
   "name": "ember-profile-upload",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "A simple photo upload component.",
   "directories": {
     "doc": "doc",
     "test": "tests"

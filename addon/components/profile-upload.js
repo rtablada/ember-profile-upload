@@ -28,12 +28,14 @@ export default Ember.Component.extend({
         destroy(this.get(`fileUrl`));
       }
 
-      upload(file).then((response) => {
+      Ember.RSVP.resolve(upload(file)).then((response) => {
         const url = deserializeResponse(response);
 
         this.onchange(url);
       }, (err) => {
-        requestError(err);
+        if (requestError) {
+          requestError(err);
+        }
       });
     }
   },
