@@ -6,6 +6,9 @@ module.exports = function(defaults) {
   var app = new EmberAddon(defaults, {
     snippetSearchPaths: ['app', 'tests/dummy/app', 'addon'],
     snippetPaths: ['tests/dummy/snippets'],
+    fingerprint: {
+      exclude: ['profile.jpg']
+    }
   });
 
   /*
