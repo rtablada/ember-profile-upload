@@ -1,6 +1,6 @@
 {
   "name": "ember-profile-upload",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple photo upload component.",
   "directories": {
     "doc": "doc",
