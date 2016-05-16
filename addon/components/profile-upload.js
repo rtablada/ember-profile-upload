@@ -4,6 +4,12 @@ import layout from '../templates/components/profile-upload';
 export default Ember.Component.extend({
   layout,
 
+  classNameBindings: [`active`],
+
+  active: Ember.computed(`fileUrl`, function() {
+    return !!this.get(`fileUrl`);
+  }),
+
   transfer: Ember.inject.service(`profile-upload`),
 
   click(ev) {

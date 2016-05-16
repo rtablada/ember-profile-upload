@@ -1,7 +1,9 @@
-{{#if src}}
-  <img src="{{src}}">
+{{#if fileUrl}}
+  <img src="{{fileUrl}}">
+{{else}}
+  <img src="{{placeholderUrl}}" alt="Upload">
 {{/if}}
 
-<button>Upload</button>
+<button class="profile-upload__btn">Upload</button>
 
 <input type="file" hidden="true" onclick={{action stopPropagation}} {{action getFileFromInput on="change"}}>
