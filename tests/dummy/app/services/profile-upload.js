@@ -1,5 +1,6 @@
 import Ember from 'ember';
 
+// BEGIN-SNIPPET filereader-service
 export default Ember.Service.extend({
   upload(file) {
     return new Promise((resolve) => {
@@ -16,3 +17,4 @@ export default Ember.Service.extend({
     return dataUrl;
   }
 });
+// END-SNIPPET

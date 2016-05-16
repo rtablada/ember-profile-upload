@@ -1,11 +1,37 @@
 <h1>Ember Profile Upload</h1>
 
+{{! BEGIN-SNIPPET component-use }}
 {{profile-upload
   class="profile-upload"
   fileUrl=url
   placeholderUrl="/profile.jpg"
   onchange=(action (mut url))}}
+{{! END-SNIPPET }}
 
 <h2>Outside URL:</h2>
 
 <img src="{{url}}" alt="">
+
+<h2>Using Ember Profile Upload</h2>
+
+<p>
+  This example shows using the <code>profile-upload</code> component to change the <code>url</code> value in our current template.
+</p>
+
+{{code-snippet name="component-use.hbs"}}
+
+<h2>Creating a <code>profile-upload</code> Service</h2>
+
+<p>
+  This example shows an example <code>profile-upload</code> service to work with Loopback storage APIs.
+</p>
+
+{{code-snippet name="loopback-service.js"}}
+
+<h2>Using Local File Upload</h2>
+
+<p>
+  This page doesn't actually upload photos, it only shows local files with <a href="https://developer.mozilla.org/en-US/docs/Using_files_from_web_applications#Example_Showing_thumbnails_of_user-selected_images">FileReader</a>.
+</p>
+
+{{code-snippet name="filereader-service.js"}}
