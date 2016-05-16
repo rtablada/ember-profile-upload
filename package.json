@@ -49,6 +49,9 @@
     "ember-cli-htmlbars": "^1.0.3"
   },
   "ember-addon": {
-    "configPath": "tests/dummy/config"
+    "configPath": "tests/dummy/config",
+    "paths": [
+      "lib/head"
+    ]
   }
 }

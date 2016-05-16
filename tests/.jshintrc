@@ -21,6 +21,8 @@
     "andThen",
     "currentURL",
     "currentPath",
+    "Promise",
+    "FileReader",
     "currentRouteName"
   ],
   "node": false,
