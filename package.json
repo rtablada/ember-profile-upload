@@ -52,6 +52,7 @@
     "configPath": "tests/dummy/config",
     "paths": [
       "lib/head"
-    ]
+    ],
+    "demoURL": "http://rtablada.github.io/ember-profile-upload/"
   }
 }
