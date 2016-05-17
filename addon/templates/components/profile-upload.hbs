@@ -4,6 +4,6 @@
   <img src="{{placeholderUrl}}" alt="Upload">
 {{/if}}
 
-<button class="profile-upload__btn">Upload</button>
+<button type="button" class="profile-upload__btn">Upload</button>
 
 <input type="file" hidden="true" onclick={{action stopPropagation}} {{action getFileFromInput on="change"}}>
