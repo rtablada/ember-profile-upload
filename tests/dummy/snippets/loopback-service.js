@@ -16,7 +16,7 @@ export default Ember.Service.extend({
     });
   },
 
-  destroy(file) {
+  destroyImage(file) {
     const url = file.replace(`download`, `files`);
 
     return Ember.$.ajax({

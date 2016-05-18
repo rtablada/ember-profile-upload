@@ -20,12 +20,12 @@ export default Ember.Component.extend({
 
   getFileFromInput() {
     const file = this.$(`input`).get(0).files[0];
-    const { upload, deserializeResponse, requestError, destroy} = this.get(`transfer`);
+    const { upload, deserializeResponse, requestError, destroyImage} = this.get(`transfer`);
     const oldFile = this.get(`fileUrl`);
 
     if (file && file.type.indexOf(`image`) > -1) {
-      if (destroy && oldFile) {
-        destroy(this.get(`fileUrl`));
+      if (destroyImage && oldFile) {
+        destroyImage(this.get(`fileUrl`));
       }
 
       Ember.RSVP.resolve(upload(file)).then((response) => {

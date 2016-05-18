@@ -1,6 +1,6 @@
 import { module } from 'qunit';
 import startApp from '../helpers/start-app';
-import destroyApp from '../helpers/destroy-app';
+import destroyImageApp from '../helpers/destroyImage-app';
 
 export default function(name, options = {}) {
   module(name, {
@@ -17,7 +17,7 @@ export default function(name, options = {}) {
         options.afterEach.apply(this, arguments);
       }
 
-      destroyApp(this.application);
+      destroyImageApp(this.application);
     }
   });
 }

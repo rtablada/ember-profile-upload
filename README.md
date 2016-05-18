@@ -82,7 +82,7 @@ To support uploading files, you will need to implement two functions in this ser
 
 The `profile-upload` service can also contain two other methods for greater flexibility:
 
-* `destroy` - Instructs the API to delete the old file
+* `destroyImage` - Instructs the API to delete the old file
 * `requestError` - Handle errors from the AJAX request
 
 ### Example service
@@ -108,7 +108,7 @@ export default Ember.Service.extend({
     });
   },
 
-  destroy(file) {
+  destroyImage(file) {
     const url = file.replace(`download`, `files`);
 
     return Ember.$.ajax({
